@@ -1,0 +1,15 @@
+.container {
+  background: black;
+  padding: 10px;
+  color: white;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    font-size: 15px;
+  }
+}
