@@ -1,25 +1,31 @@
 import Logo from "../Logo";
 import SubscribeButton from "../SubscribeButton";
-import HeaderStyle from "./Header.module.css";
+import {
+  Brand,
+  BrandContainer,
+  Container,
+  Description,
+  HeaderContainer,
+} from "./index.styles";
 
 function Header() {
   return (
-    <header className={HeaderStyle["header-container"]}>
-      <div className={HeaderStyle.container}>
-        <div className={HeaderStyle["brand-container"]}>
+    <HeaderContainer>
+      <Container>
+        <BrandContainer>
           <Logo />
-          <div className={HeaderStyle.brand}>script Radio</div>
-        </div>
+          <Brand>script Radio</Brand>
+        </BrandContainer>
 
-        <div className={HeaderStyle.description}>
+        <Description>
           Join the Javascript ecosystem. We craw and take the of the Javascript
           world.
           <div>
             <SubscribeButton />
           </div>
-        </div>
-      </div>
-    </header>
+        </Description>
+      </Container>
+    </HeaderContainer>
   );
 }
 

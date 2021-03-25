@@ -1,24 +1,24 @@
 import { AiOutlineClose } from "react-icons/ai";
-import SubscribeCardStyle from "./SubscribeCard.module.css";
+import {
+  ContainerClose,
+  DialogContainer,
+  ModalContainer,
+  Overlayer,
+} from "./index.styles";
 
 function SubscribeCard({ active }) {
   return (
     active && (
       <div>
-        <div className={SubscribeCardStyle["overlayer"]}></div>
-        <dialog
-          open={active}
-          className={SubscribeCardStyle["dialog-container"]}
-        >
-          <div className={SubscribeCardStyle["modal-container"]}>
-            <div className={SubscribeCardStyle["container-close"]}>
+        <Overlayer />
+        <DialogContainer open={active}>
+          <ModalContainer>
+            <ContainerClose>
               <AiOutlineClose />
-            </div>
-            <div>
-              lorem
-            </div>
-          </div>
-        </dialog>
+            </ContainerClose>
+            <div>lorem</div>
+          </ModalContainer>
+        </DialogContainer>
       </div>
     )
   );

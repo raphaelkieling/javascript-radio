@@ -1,7 +1,7 @@
-import LogoStyle from "./Logo.module.css";
+import { Container } from "./index.styles";
 
 function Logo() {
-  return <div className={LogoStyle.container}>JS</div>;
+  return <Container>JS</Container>;
 }
 
 export default Logo;
