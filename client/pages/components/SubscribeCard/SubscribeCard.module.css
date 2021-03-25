@@ -1,0 +1,27 @@
+.dialog-container {
+  border: none;
+  padding: 0px;
+  position: fixed;
+}
+
+.overlayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.modal-container {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  background: white;
+  height: 400px;
+  width: 300px;
+  padding: 10px;
+}
+
+.container-close {
+  display: flex;
+  justify-content: flex-end;
+}

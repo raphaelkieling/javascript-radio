@@ -1,7 +1,12 @@
-.container {
+.header-container {
   background: #f7e018;
   padding: 50px;
   position: relative;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .description {
@@ -23,5 +28,9 @@
 @media screen and (max-width: 600px) {
   .brand {
     font-size: 30px;
+  }
+
+  .header-container {
+    padding: 30px;
   }
 }
