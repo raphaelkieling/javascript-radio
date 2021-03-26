@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: black;
+  background: ${({ theme }) => theme.logo.background};
+  color: ${({ theme }) => theme.logo.text};
+  transition: background 0.3s;
   padding: 10px;
-  color: white;
   font-size: 32px;
   display: flex;
   justify-content: center;

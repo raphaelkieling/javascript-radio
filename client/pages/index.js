@@ -99,13 +99,17 @@ export default function Home() {
       <Head>
         <title>Javascript Radio - Start</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+          rel="stylesheet"
+        />
       </Head>
-
       <main>
         <Header />
         <CardsContent>
           {items.map((item) => (
-            <Card {...item} />
+            <Card key={item._id} {...item} />
           ))}
         </CardsContent>
       </main>

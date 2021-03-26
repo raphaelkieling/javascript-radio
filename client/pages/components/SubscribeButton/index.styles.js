@@ -24,7 +24,8 @@ export const IconContainer = styled.div`
 
 export const Button = styled.div`
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
-  background: white;
+  background: ${({ theme }) => theme.button.background};
+  transition: background 0.3s;
   border: none;
   font-size: 14px;
   padding: 5px 10px;

@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  background: #f7e018;
+  background: ${({ theme }) => theme.header.background};
   padding: 50px;
   position: relative;
+  transition: background 0.3s;
 
   @media screen and (max-width: 600px) {
     padding: 30px;

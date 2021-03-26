@@ -3,6 +3,8 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 
 export const Details = styled.details`
   padding: 10px;
+  background: ${({ theme }) => theme.card.background};
+  transition: background 0.3s;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
   margin-bottom: 10px;
