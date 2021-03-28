@@ -1,34 +1,27 @@
-import { useState } from "react";
+import { useContext, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../styles/global";
 import { darkTheme, lightTheme } from "../styles/theme";
-import { FaMoon, FaSun } from "react-icons/fa";
+import CustomThemeProvider, {
+  ThemeContext as CustomThemeContext,
+} from "./providers/theme";
 
-function MyApp({ Component, pageProps }) {
-  const [theme, setTheme] = useState("light");
+function PageWrapper({ Component, pageProps }) {
+  const theme = useContext(CustomThemeContext);
 
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-      <>
-        <GlobalStyle />
-        <div>
-          {theme === "light" ? (
-            <FaMoon
-              onClick={() => {
-                setTheme("dark");
-              }}
-            />
-          ) : (
-            <FaSun
-              onClick={() => {
-                setTheme("light");
-              }}
-            />
-          )}
-        </div>
-        <Component {...pageProps} />
-      </>
+    <ThemeProvider theme={theme.theme === "light" ? lightTheme : darkTheme}>
+      <GlobalStyle />
+      <Component {...pageProps} />
     </ThemeProvider>
+  );
+}
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <CustomThemeProvider>
+      <PageWrapper Component={Component} pageProps={pageProps} />
+    </CustomThemeProvider>
   );
 }
 

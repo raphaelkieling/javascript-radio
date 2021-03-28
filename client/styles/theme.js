@@ -3,6 +3,9 @@ export const lightTheme = {
   text: "#363537",
 
   header: {
+    background: "#d1bc21",
+  },
+  banner: {
     background: "#f7e018",
   },
   button: {
@@ -21,9 +24,11 @@ export const darkTheme = {
   text: "#FAFAFA",
 
   header: {
+    background: "#0f0f0f",
+  },
+  banner: {
     background: "#2d2d2d",
   },
-
   button: {
     background: "#363537",
   },

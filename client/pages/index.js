@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Card from "./components/Card";
-import Header from "./components/Header/index.js";
+import Banner from "./components/Banner/index.js";
 import styled from "styled-components";
+import Header from "./components/Header";
 
 const CardsContent = styled.div`
   padding-top: 20px;
@@ -9,6 +10,7 @@ const CardsContent = styled.div`
   margin: 0 auto;
 `;
 
+// Mocked items
 const items = [
   {
     _id: "605c95c9ac13419a4548cf8a",
@@ -107,6 +109,7 @@ export default function Home() {
       </Head>
       <main>
         <Header />
+        <Banner />
         <CardsContent>
           {items.map((item) => (
             <Card key={item._id} {...item} />
