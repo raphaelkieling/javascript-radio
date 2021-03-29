@@ -5,7 +5,6 @@ export const GlobalStyle = createGlobalStyle`
     body {
         padding: 0;
         margin: 0;
-        font-family: "Rubik", sans-serif;
         background: ${({ theme }) => theme.body};
         color: ${({ theme }) => theme.text};
         transition: background 0.3s;
@@ -18,5 +17,6 @@ export const GlobalStyle = createGlobalStyle`
 
     * {
         box-sizing: border-box;
+        font-family: "Rubik", sans-serif;
     }
 `;

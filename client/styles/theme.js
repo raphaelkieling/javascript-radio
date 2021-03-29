@@ -2,6 +2,10 @@ export const lightTheme = {
   body: "#FFF",
   text: "#363537",
 
+  loginButton: {
+    backgroundIdle: "#ad9d24",
+    backgroundHover: "#8a7e22",
+  },
   header: {
     background: "#d1bc21",
   },
@@ -23,6 +27,10 @@ export const darkTheme = {
   body: "#363537",
   text: "#FAFAFA",
 
+  loginButton: {
+    backgroundIdle: "#ad9d24",
+    backgroundHover: "#ad9d24",
+  },
   header: {
     background: "#0f0f0f",
   },
